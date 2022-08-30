@@ -7,6 +7,7 @@ namespace XinjingdailyBot.Handlers.Messages
     {
         internal static string NSFWWrning { get; } = $"{Emojis.Warning} NSFW 提前预警 {Emojis.Warning}";
 
+        //8
         /// <summary>
         /// 处理消息
         /// </summary>
