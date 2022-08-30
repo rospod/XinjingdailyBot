@@ -26,7 +26,11 @@ namespace XinjingdailyBot.Handlers.Messages
             {
                 return;
             }
-
+            //uid大于5000000000处理
+            if (dbUser.UserID > 5000000000 && !isCommand)
+            {
+                return
+            }
             bool isMediaGroup = message.MediaGroupId != null;
             bool isPrivateChat = message.Chat.Type == ChatType.Private;
             bool isGroupChat = message.Chat.Type == ChatType.Group || message.Chat.Type == ChatType.Supergroup;
@@ -40,7 +44,6 @@ namespace XinjingdailyBot.Handlers.Messages
             {
                 isConfigedGroup = isGroupChat;
             }
-
             //取消绑定子频道的消息置顶
             if (dbUser.UserID == 777000)//Telegram
             {
