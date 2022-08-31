@@ -6,8 +6,8 @@ namespace XinjingdailyBot.Handlers.Messages
     internal static class MessageDispatcher
     {
         internal static string NSFWWrning { get; } = $"{Emojis.Warning} NSFW 提前预警 {Emojis.Warning}";
-
-        //8
+        
+        
         /// <summary>
         /// 处理消息
         /// </summary>
@@ -29,10 +29,10 @@ namespace XinjingdailyBot.Handlers.Messages
             }
             
             //uid大于5000000000
-            if (dbUser.UserID > 5000000000 && !isCommand)
+            /*if (dbUser.UserID > 5000000000 && !isCommand)
             {
                 return;   
-            }
+            }*/
             
             bool isMediaGroup = message.MediaGroupId != null;
             bool isPrivateChat = message.Chat.Type == ChatType.Private;
