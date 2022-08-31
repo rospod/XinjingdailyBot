@@ -105,7 +105,7 @@ namespace XinjingdailyBot.Handlers
                     return null;
                 }
             }
-            else if (msgUser.Id >= 5000000000)
+            else if (dbUser == null && msgUser.Id >= 5000000000)
             {
                 Logger.Debug($"S 该用户ID大于5000000000已成功跳过);
                 return null;
